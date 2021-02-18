@@ -1,0 +1,58 @@
+<!--1-->
+<!--<input type="text"  (input)="logTitle()">-->
+<!--<button (click)="logTitle()">show text</button>-->
+
+<!--2-->
+<!--<input type="number" [(ngModel)]="id" #referensAngular>-->
+<!--<button (click)="showUser()">show user</button>-->
+<!--<button (click)="showValue(referensAngular)">value console.log</button>-->
+
+<!--3-->
+<!--<input type="number" required [(ngModel)]="user.id" #id="ngModel">-->
+<!--<input type="text" [(ngModel)]="user.username" #name="ngModel">-->
+
+<!--<button (click)="show(id, name)">click</button>-->
+
+<!--4-->
+<!--<div *ngIf="!id.valid">-->
+<!--  errrr-->
+<!--</div>-->
+
+<!--5-->
+<!--<div>-->
+<!--  <input type="number" [(ngModel)]="user.id" #id="ngModel" required="required">-->
+<!--  <div *ngIf="id.untouched">-->
+<!--    ти мусиш заповнити id-->
+<!--  </div>-->
+<!--</div>-->
+<!--<div>-->
+<!--  <input type="text" [(ngModel)]="user.name" #name="ngModel" required="required">-->
+<!--  <div *ngIf="name.untouched">-->
+<!--     NAME-->
+<!--  </div>-->
+<!--</div>-->
+<!--<button (click)="search()" [disabled]="!id.valid || !name.valid">search</button>-->
+<!--<div *ngIf="!id.valid && !name.valid">-->
+<!--  ЗАПОВНИ!-->
+<!--</div>-->
+
+
+<!--6-->
+<!--<div>-->
+<!--  <input type="number" [(ngModel)]="user.id" #id="ngModel" required="required">-->
+<!--</div>-->
+<!--<div>-->
+<!--  <input type="text" [(ngModel)]="user.name" #name="ngModel" required="required">-->
+<!--</div>-->
+<!--<button (click)="search(id, name)">show result</button>-->
+
+<!--7-->
+<form #myForm="ngForm" (ngSubmit)="xx(myForm)">
+<div>
+  <input type="number" [(ngModel)]="user.id" #id="ngModel" name="id" required="required">
+</div>
+<div>
+  <input type="text" [(ngModel)]="user.name" #name="ngModel" name="name" required="required">
+</div>
+<button (click)="search(id, name)">show result</button>
+</form>
